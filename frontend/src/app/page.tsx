@@ -25,10 +25,10 @@ export default function Home() {
             
             {/* LEFT SIDE: TEXT CONTENT */}
             <div className="relative z-10">
-              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-pink-50 border border-pink-100 mb-6">
+              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 mb-6">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-pink-500"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
                 </span>
                 <span className="text-xs font-bold text-[#db2777] uppercase tracking-wider">Productivity Redefined</span>
               </div>
@@ -45,7 +45,7 @@ export default function Home() {
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/signup"
-                  className="flex items-center justify-center px-10 py-4 text-white bg-[#ec4899] hover:bg-[#db2777] rounded-xl font-bold text-lg shadow-xl shadow-pink-200 transition-all hover:-translate-y-1 active:scale-95"
+                  className="flex items-center justify-center px-10 py-4 text-white bg-[#3b82f6] hover:bg-[#2563eb] rounded-xl font-bold text-lg shadow-xl shadow-blue-200 transition-all hover:-translate-y-1 active:scale-95"
                 >
                   Get Started Free
                 </Link>
@@ -62,7 +62,7 @@ export default function Home() {
             <div className="relative h-[500px] w-full hidden lg:flex items-center justify-center">
               
               {/* Soft Background Radial Glow */}
-              <div className="absolute w-[500px] h-[500px] bg-gradient-to-r from-pink-100/40 to-indigo-100/30 rounded-full blur-[120px]" />
+              <div className="absolute w-[500px] h-[500px] bg-gradient-to-r from-blue-100/40 to-indigo-100/30 rounded-full blur-[120px]" />
 
               {/* 1. Main Task Card Element */}
               <div className="absolute z-20 w-72 h-48 bg-white/40 backdrop-blur-2xl border border-white/60 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.05)] p-6 animate-float">
@@ -76,7 +76,7 @@ export default function Home() {
                   <div className="h-3 w-full bg-white/60 rounded-full" />
                   <div className="h-3 w-3/4 bg-white/60 rounded-full" />
                   <div className="flex space-x-2 pt-2">
-                    <div className="h-6 w-16 bg-pink-100/50 border border-pink-200 rounded-md" />
+                    <div className="h-6 w-16 bg-blue-100/50 border border-blue-200 rounded-md" />
                     <div className="h-6 w-16 bg-blue-100/50 border border-blue-200 rounded-md" />
                   </div>
                 </div>
@@ -139,7 +139,7 @@ export default function Home() {
 
 function FeatureCard({ title, desc }: { title: string, desc: string }) {
   return (
-    <div className="group p-8 rounded-2xl bg-[#fafafa] border border-gray-100 hover:border-pink-200 hover:bg-white hover:shadow-xl transition-all duration-300">
+    <div className="group p-8 rounded-2xl bg-[#fafafa] border border-gray-100 hover:border-blue-200 hover:bg-white hover:shadow-xl transition-all duration-300">
       <div className="h-10 w-10 bg-white shadow-sm border border-gray-100 text-[#ec4899] rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
       </div>

@@ -154,7 +154,7 @@ export default function FloatingChatWidget() {
       <div className="fixed bottom-6 right-6 z-50">
         <button
           onClick={toggleChat}
-          className="w-14 h-14 rounded-full bg-pink-500 text-white flex items-center justify-center shadow-lg hover:bg-pink-600 transition-all duration-300 transform hover:scale-110"
+          className="w-14 h-14 rounded-full bg-blue-500 text-white flex items-center justify-center shadow-lg hover:bg-blue-600 transition-all duration-300 transform hover:scale-110"
           aria-label="Open chat"
         >
           <svg
@@ -196,7 +196,7 @@ export default function FloatingChatWidget() {
               <h2 className="text-lg font-bold">Todo Assistant</h2>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-white hover:text-pink-100"
+                className="text-white hover:text-blue-100"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -230,14 +230,14 @@ export default function FloatingChatWidget() {
                     <div
                       className={`max-w-[80%] rounded-3xl p-3 ${
                         message.role === 'user'
-                          ? 'bg-pink-500 text-white rounded-br-none'
-                          : 'bg-pink-100 text-pink-800 rounded-bl-none'
+                          ? 'bg-blue-500 text-white rounded-br-none'
+                          : 'bg-blue-100 text-blue-800 rounded-bl-none'
                       }`}
                     >
                       <div className="whitespace-pre-wrap text-sm">{message.content}</div>
                       <div
                         className={`text-xs mt-1 ${
-                          message.role === 'user' ? 'text-pink-100' : 'text-pink-600'
+                          message.role === 'user' ? 'text-blue-100' : 'text-blue-600'
                         }`}
                       >
                         {new Date(message.timestamp).toLocaleTimeString([], {
@@ -261,7 +261,7 @@ export default function FloatingChatWidget() {
             </div>
 
             {/* Input Area */}
-            <div className="border-t p-3 bg-pink-50 rounded-b-3xl">
+            <div className="border-t p-3 bg-blue-50 rounded-b-3xl">
               {error && (
                 <div className="mb-2 p-2 bg-red-100 text-red-700 rounded-xl text-sm">
                   {error}
@@ -273,7 +273,7 @@ export default function FloatingChatWidget() {
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyDown={handleKeyDown}
                   placeholder="Ask about your todos..."
-                  className="flex-1 border border-pink-300 rounded-2xl px-4 py-2 focus:outline-none focus:ring-2 text-sm"
+                  className="flex-1 border border-blue-300 rounded-2xl px-4 py-2 focus:outline-none focus:ring-2 text-sm"
                   style={{
                     '--tw-ring-color': '#ff6b9d'
                   } as React.CSSProperties}
@@ -282,7 +282,7 @@ export default function FloatingChatWidget() {
                 <button
                   onClick={sendMessage}
                   disabled={isLoading || !inputValue.trim() || !isAuthenticated}
-                  className="px-4 py-2 bg-pink-500 text-white rounded-2xl hover:bg-pink-600 disabled:opacity-50 transition text-sm"
+                  className="px-4 py-2 bg-blue-500 text-white rounded-2xl hover:bg-blue-600 disabled:opacity-50 transition text-sm"
                 >
                   {isLoading ? (
                     <svg
@@ -310,7 +310,7 @@ export default function FloatingChatWidget() {
                   )}
                 </button>
               </div>
-              <div className="mt-1 text-xs text-pink-500 text-center">
+              <div className="mt-1 text-xs text-blue-500 text-center">
                 Ask me to add, complete, or manage your todos
               </div>
             </div>

@@ -114,13 +114,13 @@ export default function TodoSection({ isAuthenticated }: TodoSectionProps) {
         <div className="flex justify-center space-x-4">
           <a 
             href="/signin" 
-            className="px-6 py-3 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition-colors"
+            className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
           >
             Sign In
           </a>
           <a 
             href="/signup" 
-            className="px-6 py-3 border border-pink-500 text-pink-600 rounded-lg hover:bg-pink-50 transition-colors"
+            className="px-6 py-3 border border-blue-500 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
           >
             Sign Up
           </a>
@@ -254,7 +254,7 @@ export default function TodoSection({ isAuthenticated }: TodoSectionProps) {
           </h3>
 
           {pendingTodos.length === 0 ? (
-            <p className="text-pink-600 text-center py-8" style={{ color: '#ff69b4' }}>No pending todos</p>
+            <p className="text-blue-600 text-center py-8" style={{ color: '#3b82f6' }}>No pending todos</p>
           ) : (
             <div className="space-y-3">
               {pendingTodos.map((todo) => (
@@ -282,7 +282,7 @@ export default function TodoSection({ isAuthenticated }: TodoSectionProps) {
                   <div className="flex gap-2">
                     <button
                       onClick={() => handleDelete(todo.id)}
-                      className="px-3 py-1 text-sm rounded-full text-gray-500 hover:text-pink-700 transition-colors"
+                      className="px-3 py-1 text-sm rounded-full text-gray-500 hover:text-blue-700 transition-colors"
                       style={{ color: 'black' }}
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -305,7 +305,7 @@ export default function TodoSection({ isAuthenticated }: TodoSectionProps) {
           </h3>
 
           {completedTodos.length === 0 ? (
-            <p className="text-pink-600 text-center py-8" style={{ color: '#ff69b4' }}>No completed todos yet</p>
+            <p className="text-blue-600 text-center py-8" style={{ color: '#3b82f6' }}>No completed todos yet</p>
           ) : (
             <div className="space-y-3">
               {completedTodos.map((todo) => (
@@ -333,7 +333,7 @@ export default function TodoSection({ isAuthenticated }: TodoSectionProps) {
                   <div className="flex gap-2">
                     <button
                       onClick={() => handleDelete(todo.id)}
-                      className="px-3 py-1 text-sm rounded-full text-gray-500 hover:text-pink-700 transition-colors"
+                      className="px-3 py-1 text-sm rounded-full text-gray-500 hover:text-blue-700 transition-colors"
                       style={{ color: 'black' }}
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

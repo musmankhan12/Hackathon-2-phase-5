@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
        2. z-50: Ensures it stays ABOVE the background image and other content.
        3. bg-white/80 + backdrop-blur: Gives a clean, consistent look across browsers.
     */
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-pink-100 shadow-sm">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-blue-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
                   </Link>
                   <Link
                     href="/signup"
-                    className="bg-[#ec4899] hover:bg-[#db2777] text-white px-5 py-2 rounded-full text-sm font-bold shadow-md shadow-pink-200 transition-all hover:scale-105"
+                    className="bg-[#3b82f6] hover:bg-[#2563eb] text-white px-5 py-2 rounded-full text-sm font-bold shadow-md shadow-blue-200 transition-all hover:scale-105"
                   >
                     Sign Up
                   </Link>

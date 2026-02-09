@@ -308,7 +308,7 @@ const Dashboard = () => {
   });
 
   return (
-    <div className="flex h-screen bg-gradient-to-br from-gray-50 to-pink-50 text-gray-900">
+    <div className="flex h-screen bg-gradient-to-br from-gray-50 to-blue-50 text-gray-900">
       {/* Mobile menu button */}
       <div className="md:hidden fixed top-4 left-4 z-50">
         <button
@@ -342,16 +342,16 @@ const Dashboard = () => {
       )}
 
       {/* Sidebar */}
-      <div className={`${sidebarOpen ? 'w-64' : 'w-20'} ${mobileSidebarOpen ? 'fixed inset-y-0 z-50' : 'hidden md:flex'} bg-gradient-to-b from-pink-400 to-pink-600 border border-pink-500 rounded-3xl shadow-lg shadow-pink-200/50 flex flex-col transition-all duration-300 m-4 relative overflow-hidden`}>
+      <div className={`${sidebarOpen ? 'w-64' : 'w-20'} ${mobileSidebarOpen ? 'fixed inset-y-0 z-50' : 'hidden md:flex'} bg-gradient-to-b from-blue-400 to-blue-600 border border-blue-500 rounded-3xl shadow-lg shadow-blue-200/50 flex flex-col transition-all duration-300 m-4 relative overflow-hidden`}>
         {/* Abstract geometric pattern overlay */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-10 right-4 w-16 h-16 rounded-full bg-pink-300/20"></div>
-          <div className="absolute top-1/3 right-2 w-8 h-8 rounded-full bg-pink-200/30"></div>
-          <div className="absolute bottom-20 right-6 w-12 h-12 rounded-lg bg-pink-300/15 transform rotate-45"></div>
-          <div className="absolute bottom-1/3 right-3 w-6 h-6 rounded-full bg-pink-200/25"></div>
+          <div className="absolute top-10 right-4 w-16 h-16 rounded-full bg-blue-300/20"></div>
+          <div className="absolute top-1/3 right-2 w-8 h-8 rounded-full bg-blue-200/30"></div>
+          <div className="absolute bottom-20 right-6 w-12 h-12 rounded-lg bg-blue-300/15 transform rotate-45"></div>
+          <div className="absolute bottom-1/3 right-3 w-6 h-6 rounded-full bg-blue-200/25"></div>
         </div>
         
-        <div className="p-6 pb-4 border-b border-pink-500/50 flex justify-between items-center relative z-10">
+        <div className="p-6 pb-4 border-b border-blue-500/50 flex justify-between items-center relative z-10">
           <h1 className={`font-bold text-xl ${sidebarOpen ? 'block' : 'hidden'} text-white`} style={{ color: 'white' }}>TodoApp</h1>
           <button
             onClick={() => {
@@ -361,31 +361,31 @@ const Dashboard = () => {
                 toggleSidebar();
               }
             }}
-            className="p-1 rounded hover:bg-pink-500/50"
+            className="p-1 rounded hover:bg-blue-500/50"
           >
             <ChevronDown className={`w-4 h-4 ${sidebarOpen ? 'rotate-180' : ''}`} style={{ color: 'white' }} />
           </button>
         </div>
 
         <nav className="flex-1 p-4 space-y-2 relative z-10">
-          <a href="#" className="flex items-center gap-3 px-3 py-2 rounded-xl bg-pink-500/30 text-white" style={{ color: 'white' }}>
+          <a href="#" className="flex items-center gap-3 px-3 py-2 rounded-xl bg-blue-500/30 text-white" style={{ color: 'white' }}>
             <Inbox className="w-5 h-5" style={{ color: 'white' }} />
             {sidebarOpen && <span style={{ color: 'white' }}>Inbox</span>}
           </a>
-          <a href="#" className="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-pink-500/20" style={{ color: 'white' }}>
+          <a href="#" className="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-blue-500/20" style={{ color: 'white' }}>
             <Calendar className="w-5 h-5" style={{ color: 'white' }} />
             {sidebarOpen && <span style={{ color: 'white' }}>Today</span>}
           </a>
-          <a href="#" className="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-pink-500/20" style={{ color: 'white' }}>
+          <a href="#" className="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-blue-500/20" style={{ color: 'white' }}>
             <Clock className="w-5 h-5" style={{ color: 'white' }} />
             {sidebarOpen && <span style={{ color: 'white' }}>Upcoming</span>}
           </a>
 
           <div className={`mt-6 ${sidebarOpen ? 'block' : 'hidden'}`}>
-            <h3 className="px-3 text-xs font-semibold text-pink-100 uppercase tracking-wider mb-2" style={{ color: '#ffccdd' }}>Status</h3>
+            <h3 className="px-3 text-xs font-semibold text-blue-100 uppercase tracking-wider mb-2" style={{ color: '#cceeff' }}>Status</h3>
             <button 
               onClick={() => setActiveFilter('all')}
-              className={`flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-pink-500/20 w-full text-left ${activeFilter === 'all' ? 'bg-pink-500/30' : ''}`}
+              className={`flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-blue-500/20 w-full text-left ${activeFilter === 'all' ? 'bg-blue-500/30' : ''}`}
               style={{ color: 'white' }}
             >
               <Inbox className="w-5 h-5" style={{ color: 'white' }} />
@@ -393,7 +393,7 @@ const Dashboard = () => {
             </button>
             <button 
               onClick={() => setActiveFilter('completed')}
-              className={`flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-pink-500/20 w-full text-left ${activeFilter === 'completed' ? 'bg-pink-500/30' : ''}`}
+              className={`flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-blue-500/20 w-full text-left ${activeFilter === 'completed' ? 'bg-blue-500/30' : ''}`}
               style={{ color: 'white' }}
             >
               <CheckCircle2 className="w-5 h-5" style={{ color: 'white' }} />
@@ -401,7 +401,7 @@ const Dashboard = () => {
             </button>
             <button 
               onClick={() => setActiveFilter('pending')}
-              className={`flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-pink-500/20 w-full text-left ${activeFilter === 'pending' ? 'bg-pink-500/30' : ''}`}
+              className={`flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-blue-500/20 w-full text-left ${activeFilter === 'pending' ? 'bg-blue-500/30' : ''}`}
               style={{ color: 'white' }}
             >
               <Circle className="w-5 h-5" style={{ color: 'white' }} />
@@ -411,7 +411,7 @@ const Dashboard = () => {
         </nav>
 
         {/* User Profile */}
-        <div className="p-4 border-t border-pink-500/50 relative z-10">
+        <div className="p-4 border-t border-blue-500/50 relative z-10">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black text-sm font-medium" style={{ backgroundColor: 'white', color: 'black' }}>
               {user ? user.email.charAt(0).toUpperCase() : 'U'}
@@ -419,11 +419,11 @@ const Dashboard = () => {
             {sidebarOpen && (
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-medium truncate" style={{ color: 'white' }}>{user ? user.email.split('@')[0] : 'User'}</p>
-                <p className="text-xs text-pink-200 truncate" style={{ color: '#ffccdd' }}>{user ? user.email : 'user@example.com'}</p>
+                <p className="text-xs text-blue-200 truncate" style={{ color: '#cceeff' }}>{user ? user.email : 'user@example.com'}</p>
               </div>
             )}
             <button
-              className="p-1 rounded hover:bg-pink-500/50 relative"
+              className="p-1 rounded hover:bg-blue-500/50 relative"
               onClick={() => setUserMenuOpen(!userMenuOpen)}
             >
               <MoreVertical className="w-4 h-4" style={{ color: 'white' }} />
@@ -432,9 +432,9 @@ const Dashboard = () => {
           
           {/* User Menu Dropdown */}
           {userMenuOpen && (
-            <div className="absolute bottom-full left-4 mb-2 w-48 bg-pink-600/90 backdrop-blur-sm border border-pink-500/50 rounded-2xl shadow-xl z-20 user-menu-container">
+            <div className="absolute bottom-full left-4 mb-2 w-48 bg-blue-600/90 backdrop-blur-sm border border-blue-500/50 rounded-2xl shadow-xl z-20 user-menu-container">
               <div className="py-1">
-                <div className="px-4 py-2 text-xs font-medium text-pink-200 uppercase tracking-wider border-b border-pink-500/50">
+                <div className="px-4 py-2 text-xs font-medium text-blue-200 uppercase tracking-wider border-b border-blue-500/50">
                   Account
                 </div>
                 <button
@@ -445,7 +445,7 @@ const Dashboard = () => {
                     setShowEditProfileModal(true);
                     setUserMenuOpen(false);
                   }}
-                  className="w-full text-left px-4 py-2 text-sm hover:bg-pink-700/50 flex items-center gap-2 rounded-lg"
+                  className="w-full text-left px-4 py-2 text-sm hover:bg-blue-700/50 flex items-center gap-2 rounded-lg"
                   style={{ color: 'white' }}
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -459,7 +459,7 @@ const Dashboard = () => {
                     router.push('/');
                     setUserMenuOpen(false);
                   }}
-                  className="w-full text-left px-4 py-2 text-sm hover:bg-pink-700/50 flex items-center gap-2 rounded-lg"
+                  className="w-full text-left px-4 py-2 text-sm hover:bg-blue-700/50 flex items-center gap-2 rounded-lg"
                   style={{ color: 'white' }}
                 >
                   <LogOut className="w-4 h-4" style={{ color: 'white' }} />
@@ -478,7 +478,7 @@ const Dashboard = () => {
           <div className="flex items-center justify-between p-4">
             <div>
               <h1 className="text-2xl font-semibold" style={{ color: 'black' }}>Good morning, {user ? user.email.split('@')[0] : 'User'}&apos;s Dashboard</h1>
-              <p className="text-pink-500" style={{ color: '#ff69b4' }}>{formattedDate}</p>
+              <p className="text-blue-500" style={{ color: '#3b82f6' }}>{formattedDate}</p>
             </div>
 
             <div className="flex items-center gap-4">
@@ -486,13 +486,13 @@ const Dashboard = () => {
               <div className="md:hidden relative mobile-search-container">
                 {mobileSearchOpen ? (
                   <div className="relative flex items-center">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-pink-400 w-4 h-4" style={{ color: 'black' }} />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-400 w-4 h-4" style={{ color: 'black' }} />
                     <input
                       type="text"
                       placeholder="Search tasks..."
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      className="pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent w-48"
+                      className="pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-48"
                       style={{ borderColor: '#d1d5db', color: 'black' }}
                       autoFocus
                     />
@@ -531,7 +531,7 @@ const Dashboard = () => {
                   placeholder="Search tasks..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                  className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   style={{ borderColor: '#d1d5db', color: 'black' }}
                 />
                 {searchQuery && (
@@ -582,13 +582,13 @@ const Dashboard = () => {
                 onChange={(e) => setNewTask(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleAddTask()}
                 placeholder="Add a new task..."
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 style={{ borderColor: '#d1d5db', color: 'black' }}
               />
               <select
                 value={newTaskPriority}
                 onChange={(e) => setNewTaskPriority(e.target.value as 'low' | 'medium' | 'high')}
-                className="px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                className="px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 style={{ borderColor: '#d1d5db', color: 'black', backgroundColor: 'white' }}
               >
                 <option value="low">Low</option>
@@ -612,11 +612,11 @@ const Dashboard = () => {
 
             {filteredTasks.length === 0 ? (
               <div className="text-center py-12">
-                <div className="mx-auto w-24 h-24 bg-pink-100 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: 'rgba(255, 105, 180, 0.1)' }}>
-                  <CheckCircle2 className="w-12 h-12 text-pink-400" style={{ color: '#ff69b4' }} />
+                <div className="mx-auto w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: 'rgba(59, 130, 246, 0.1)' }}>
+                  <CheckCircle2 className="w-12 h-12 text-blue-400" style={{ color: '#3b82f6' }} />
                 </div>
-                <h3 className="text-lg font-medium text-pink-600 mb-1" style={{ color: 'black' }}>No tasks yet</h3>
-                <p className="text-pink-500" style={{ color: '#ff69b4' }}>Add your first task to get started</p>
+                <h3 className="text-lg font-medium text-blue-600 mb-1" style={{ color: 'black' }}>No tasks yet</h3>
+                <p className="text-blue-500" style={{ color: '#3b82f6' }}>Add your first task to get started</p>
               </div>
             ) : (
               filteredTasks.map((task) => (
@@ -632,7 +632,7 @@ const Dashboard = () => {
                     className="flex-shrink-0"
                   >
                     {task.completed ? (
-                      <CheckCircle2 className="w-5 h-5 text-pink-500" style={{ color: '#ff69b4' }} />
+                      <CheckCircle2 className="w-5 h-5 text-blue-500" style={{ color: '#3b82f6' }} />
                     ) : (
                       <Circle className="w-5 h-5 text-gray-400 hover:text-gray-600" style={{ color: 'black' }} />
                     )}
@@ -647,13 +647,13 @@ const Dashboard = () => {
                       {task.priority && (
                         <span className={`inline-flex items-center gap-1 text-xs ${getPriorityColor(task.priority)}`}
                               style={{ color: task.priority === 'high' ? 'black' : task.priority === 'medium' ? '#ff69b4' : '#ff69b4' }}>
-                          <Flag className={`w-3 h-3 ${task.priority === 'high' ? 'fill-black' : task.priority === 'medium' ? 'fill-pink-500' : 'fill-pink-400'}`} 
+                          <Flag className={`w-3 h-3 ${task.priority === 'high' ? 'fill-black' : task.priority === 'medium' ? 'fill-blue-500' : 'fill-blue-400'}`} 
                                 style={{ fill: task.priority === 'high' ? 'black' : task.priority === 'medium' ? '#ff69b4' : '#ff69b4' }} />
                           {task.priority.charAt(0).toUpperCase() + task.priority.slice(1)}
                         </span>
                       )}
                       {task.dueDate && (
-                        <span className="inline-flex items-center gap-1 text-xs text-pink-500" style={{ color: '#ff69b4' }}>
+                        <span className="inline-flex items-center gap-1 text-xs text-blue-500" style={{ color: '#3b82f6' }}>
                           <Clock className="w-3 h-3" style={{ color: 'black' }} />
                           {formatDate(task.dueDate)}
                         </span>
@@ -674,7 +674,7 @@ const Dashboard = () => {
                       <div className="absolute right-0 mt-1 w-48 bg-white border border-gray-300 rounded-lg shadow-lg z-10"
                            style={{ borderColor: '#d1d5db', backgroundColor: 'white' }}>
                         <div className="py-1">
-                          <div className="px-3 py-2 text-xs font-medium text-pink-500 uppercase tracking-wider border-b border-gray-300"
+                          <div className="px-3 py-2 text-xs font-medium text-blue-500 uppercase tracking-wider border-b border-gray-300"
                                style={{ color: '#ff69b4', borderColor: '#d1d5db' }}>
                             Set Priority
                           </div>
@@ -691,7 +691,7 @@ const Dashboard = () => {
                             className="w-full text-left px-3 py-2 text-sm hover:bg-gray-50 flex items-center gap-2"
                             style={{ color: '#ff69b4' }}
                           >
-                            <Flag className="w-4 h-4 text-pink-500" style={{ color: '#ff69b4' }} />
+                            <Flag className="w-4 h-4 text-blue-500" style={{ color: '#3b82f6' }} />
                             Medium Priority
                           </button>
                           <button
@@ -699,7 +699,7 @@ const Dashboard = () => {
                             className="w-full text-left px-3 py-2 text-sm hover:bg-gray-50 flex items-center gap-2"
                             style={{ color: '#ff69b4' }}
                           >
-                            <Flag className="w-4 h-4 text-pink-400" style={{ color: '#ff69b4' }} />
+                            <Flag className="w-4 h-4 text-blue-400" style={{ color: '#3b82f6' }} />
                             Low Priority
                           </button>
                           <div className="border-t border-gray-300" style={{ borderColor: '#d1d5db' }}></div>
@@ -752,10 +752,10 @@ const Dashboard = () => {
 
           <div className="space-y-4">
             <div className="bg-gray-50 rounded-lg p-4" style={{ backgroundColor: 'rgba(0, 0, 0, 0.02)' }}>
-              <h3 className="text-sm font-medium text-pink-500 mb-2" style={{ color: '#ff69b4' }}>Today&apos;s Progress</h3>
+              <h3 className="text-sm font-medium text-blue-500 mb-2" style={{ color: '#3b82f6' }}>Today&apos;s Progress</h3>
               <div className="w-full bg-gray-300 rounded-full h-2" style={{ backgroundColor: '#d1d5db' }}>
                 <div
-                  className="bg-pink-500 h-2 rounded-full"
+                  className="bg-blue-500 h-2 rounded-full"
                   style={{ 
                     width: `${Math.min(100, (filteredTasks.filter(t => t.completed).length / filteredTasks.length) * 100)}%`,
                     backgroundColor: '#ff69b4'
@@ -768,7 +768,7 @@ const Dashboard = () => {
             </div>
 
             <div className="bg-gray-50 rounded-lg p-4" style={{ backgroundColor: 'rgba(0, 0, 0, 0.02)' }}>
-              <h3 className="text-sm font-medium text-pink-500 mb-2" style={{ color: '#ff69b4' }}>Upcoming Deadlines</h3>
+              <h3 className="text-sm font-medium text-blue-500 mb-2" style={{ color: '#3b82f6' }}>Upcoming Deadlines</h3>
               <div className="space-y-3">
                 {tasks
                   .filter(task => task.dueDate && !task.completed)
@@ -784,7 +784,7 @@ const Dashboard = () => {
             </div>
 
             <div className="bg-gray-50 rounded-lg p-4" style={{ backgroundColor: 'rgba(0, 0, 0, 0.02)' }}>
-              <h3 className="text-sm font-medium text-pink-500 mb-2" style={{ color: '#ff69b4' }}>Priority Distribution</h3>
+              <h3 className="text-sm font-medium text-blue-500 mb-2" style={{ color: '#3b82f6' }}>Priority Distribution</h3>
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-sm" style={{ color: 'black' }}>High Priority</span>
@@ -794,13 +794,13 @@ const Dashboard = () => {
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-sm" style={{ color: 'black' }}>Medium Priority</span>
-                  <span className="text-sm font-medium text-pink-500" style={{ color: '#ff69b4' }}>
+                  <span className="text-sm font-medium text-blue-500" style={{ color: '#3b82f6' }}>
                     {tasks.filter(t => t.priority === 'medium').length}
                   </span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-sm" style={{ color: 'black' }}>Low Priority</span>
-                  <span className="text-sm font-medium text-pink-400" style={{ color: '#ff69b4' }}>
+                  <span className="text-sm font-medium text-blue-400" style={{ color: '#3b82f6' }}>
                     {tasks.filter(t => t.priority === 'low').length}
                   </span>
                 </div>
@@ -809,7 +809,7 @@ const Dashboard = () => {
 
             {/* Tasks grouped by priority */}
             <div className="bg-gray-50 rounded-lg p-4" style={{ backgroundColor: 'rgba(0, 0, 0, 0.02)' }}>
-              <h3 className="text-sm font-medium text-pink-500 mb-2" style={{ color: '#ff69b4' }}>Tasks by Priority</h3>
+              <h3 className="text-sm font-medium text-blue-500 mb-2" style={{ color: '#3b82f6' }}>Tasks by Priority</h3>
               <div className="space-y-3">
                 {/* High Priority Tasks */}
                 <div>
@@ -830,7 +830,7 @@ const Dashboard = () => {
 
                 {/* Medium Priority Tasks */}
                 <div>
-                  <h4 className="text-xs font-semibold text-pink-500 uppercase tracking-wider mb-1" style={{ color: '#ff69b4' }}>Medium Priority</h4>
+                  <h4 className="text-xs font-semibold text-blue-500 uppercase tracking-wider mb-1" style={{ color: '#3b82f6' }}>Medium Priority</h4>
                   <div className="space-y-1">
                     {tasks
                       .filter(task => task.priority === 'medium' && !task.completed)
@@ -847,7 +847,7 @@ const Dashboard = () => {
 
                 {/* Low Priority Tasks */}
                 <div>
-                  <h4 className="text-xs font-semibold text-pink-400 uppercase tracking-wider mb-1" style={{ color: '#ff69b4' }}>Low Priority</h4>
+                  <h4 className="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-1" style={{ color: '#3b82f6' }}>Low Priority</h4>
                   <div className="space-y-1">
                     {tasks
                       .filter(task => task.priority === 'low' && !task.completed)
@@ -887,7 +887,7 @@ const Dashboard = () => {
                   type="text"
                   value={editingName}
                   onChange={(e) => setEditingName(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   style={{ borderColor: '#d1d5db', color: 'black' }}
                 />
               </div>
@@ -898,7 +898,7 @@ const Dashboard = () => {
                   type="email"
                   value={editingEmail}
                   onChange={(e) => setEditingEmail(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   style={{ borderColor: '#d1d5db', color: 'black' }}
                 />
               </div>
@@ -936,7 +936,7 @@ const Dashboard = () => {
                     setError('Failed to update profile. Please try again.');
                   }
                 }}
-                className="px-4 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600"
+                className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
                 style={{ backgroundColor: '#ff69b4', color: 'white' }}
               >
                 Save Changes

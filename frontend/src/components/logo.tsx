@@ -30,9 +30,9 @@ export default function Logo({ className = "", size = 40 }: { className?: string
     >
       {/* Gradient definition */}
       <defs>
-        <linearGradient id="pinkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#FFB6C1" />
-          <stop offset="100%" stopColor="#FF1493" />
+        <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#93C5FD" />
+          <stop offset="100%" stopColor="#2563EB" />
         </linearGradient>
       </defs>
 
@@ -43,7 +43,7 @@ export default function Logo({ className = "", size = 40 }: { className?: string
         width="56"
         height="56"
         rx="14"
-        fill="url(#pinkGradient)"
+        fill="url(#blueGradient)"
       />
 
       {/* Centered circular outline */}
