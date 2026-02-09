@@ -5,7 +5,8 @@
  * automatic credentials inclusion for session management.
  */
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+// For Vercel deployment, use relative paths to the integrated API routes
+const API_URL = process.env.NEXT_PUBLIC_API_URL || '';
 
 
 /**
